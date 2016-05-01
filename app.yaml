@@ -14,12 +14,12 @@ skip_files:
 handlers:
               - url:             /
                 script:          index.php
-                secure:          optional
+                secure:          always
                 
               - url:             /(.+\.(ico|png|xml))$
                 static_files:    \1
                 upload:          .+\.(ico|png|xml)$
-                secure:          optional
+                secure:          always
                 http_headers:     
                                  DNT:                                  "1"
                                  Vary:                                 "Accept-Encoding, Content-Description, Content-Transfer-Encoding, Content-Type, Remote-Address, X-Forwarded-For, X-Forwarded-Host, X-Forwarded-Port, X-Forwarded-Proto, X-Forwarded-Server, X-HTTP-Method-Override, X-Real-IP"
@@ -37,4 +37,4 @@ handlers:
 
               - url:             /.*
                 script:          index.php
-                secure:          optional
+                secure:          always
