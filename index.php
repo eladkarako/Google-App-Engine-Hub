@@ -49,9 +49,8 @@
                      );
 
 
-  /* output content with tweak to prevent JavaScript-drinking attack by script-injection */
   header('Content-Type: '                      .   'text/json;charset=UTF-8');
-  echo 'while(true){};' . $xhr;
+  print($xhr);
 
   /* clean up and explicit flush */
   unset($url);
