@@ -1,0 +1,40 @@
+version:      1
+api_version:  1
+runtime:      php55
+application:  request-proxy
+
+skip_files:
+              - ^(.*/)?#.*#$
+              - ^(.*/)?.*~$
+              - ^(.*/)?.*\.py[co]$
+              - ^(.*/)?.*/RCS/.*$
+              - ^(.*/)?\..*$
+              - ^run\.cmd$
+
+handlers:
+              - url:             /
+                script:          index.php
+                secure:          optional
+                
+              - url:             /(.+\.(ico|png|xml))$
+                static_files:    \1
+                upload:          .+\.(ico|png|xml)$
+                secure:          optional
+                http_headers:     
+                                 DNT:                                  "1"
+                                 Vary:                                 "Accept-Encoding, Content-Description, Content-Transfer-Encoding, Content-Type, Remote-Address, X-Forwarded-For, X-Forwarded-Host, X-Forwarded-Port, X-Forwarded-Proto, X-Forwarded-Server, X-HTTP-Method-Override, X-Real-IP"
+                                 X-Powered-By:                         "eladkarako.com servers are Powered By Love ..and catnip!"
+                                 X-Robots-Tag:                         "index, follow, snippet, archive, odp, translate, imageindex"
+                                 Accept-Ranges:                        "bytes"
+                                 X-UA-Compatible:                      "IE=Edge,chrome=1"
+                                 X-Xss-Protection:                     "1; mode=block"
+                                 Timing-Allow-Origin:                  "*"
+                                 X-Content-Type-Options:               "nosniff"
+                                 Access-Control-Allow-Origin:          "*"
+                                 Access-Control-Allow-Headers:         "Content-Length, Cookie, Referer, Set-Cookie, Vary, X-Forwarded-For, X-Forwarded-Host, X-Forwarded-Port, X-Forwarded-Proto, X-Forwarded-Server, X-Real-IP, X-Requested-With"
+                                 Access-Control-Expose-Headers:        "Content-Length, Cookie, Referer, Set-Cookie, Vary, X-Forwarded-For, X-Forwarded-Host, X-Forwarded-Port, X-Forwarded-Proto, X-Forwarded-Server, X-Real-IP, X-Requested-With"
+                                 Access-Control-Allow-Credentials:     "true"
+
+              - url:             /.*
+                script:          index.php
+                secure:          optional
