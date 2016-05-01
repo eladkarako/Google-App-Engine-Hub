@@ -9,6 +9,7 @@ skip_files:
               - ^(.*/)?.*\.py[co]$
               - ^(.*/)?.*/RCS/.*$
               - ^(.*/)?\..*$
+              - ^README\.md$
               - ^run_deploy\.cmd$
               - ^run_readme\.txt$
               - ^run_rollback_cleanup\.cmd$
