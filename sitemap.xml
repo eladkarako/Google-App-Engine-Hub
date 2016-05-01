@@ -6,4 +6,7 @@
               http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url><loc>http://project00001--request-proxy.appspot.com/</loc></url>
 <url><loc>https://project00001--request-proxy.appspot.com/</loc></url>
+<url><loc>https://project00001--request-proxy.appspot.com/index.php</loc></url>
+<url><loc>https://project00001--request-proxy.appspot.com/?url</loc></url>
+<url><loc>https://project00001--request-proxy.appspot.com/index.php?url</loc></url>
 </urlset>
