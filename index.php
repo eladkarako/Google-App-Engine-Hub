@@ -13,8 +13,8 @@
 
   /* headers (CORS, security, etc...) */
   header('Access-Control-Allow-Origin: '       .   '*');
-  header('Access-Control-Allow-Headers: '      .   'Accept, Accept-Charset, Accept-Encoding, Accept-Language, Access-Control-Allow-Credentials, Access-Control-Allow-Headers, Access-Control-Allow-Methods, Access-Control-Allow-Origin, Access-Control-Expose-Headers, Access-Control-Max-Age, Access-Control-Request-Headers, Access-Control-Request-Method, Cache-Control, Connection, Content-Description, Content-Encoding, Content-Language, Content-Length, Content-Transfer-Encoding, Content-Type, Cookie, Date, DNT, Expires, Host, If-Modified-Since, Keep-Alive, Last-Modified, Origin, Pragma, Referer, Remote-Address, Server, Set-Cookie, Timing-Allow-Origin, Transfer-Encoding, User-Agent, Vary, X-Content-Type-Options, X-CustomHeader, X-Forwarded-For, X-Forwarded-Host, X-Forwarded-Port, X-Forwarded-Proto, X-Forwarded-Server, X-HTTP-Method-Override, X-Modified, X-OTHER, X-PING, X-PINGOTHER, X-Powered-By, X-Real-IP, X-Requested-With');
-  header('Access-Control-Expose-Headers: '     .   'Accept, Accept-Charset, Accept-Encoding, Accept-Language, Access-Control-Allow-Credentials, Access-Control-Allow-Headers, Access-Control-Allow-Methods, Access-Control-Allow-Origin, Access-Control-Expose-Headers, Access-Control-Max-Age, Access-Control-Request-Headers, Access-Control-Request-Method, Cache-Control, Connection, Content-Description, Content-Encoding, Content-Language, Content-Length, Content-Transfer-Encoding, Content-Type, Cookie, Date, DNT, Expires, Host, If-Modified-Since, Keep-Alive, Last-Modified, Origin, Pragma, Referer, Remote-Address, Server, Set-Cookie, Timing-Allow-Origin, Transfer-Encoding, User-Agent, Vary, X-Content-Type-Options, X-CustomHeader, X-Forwarded-For, X-Forwarded-Host, X-Forwarded-Port, X-Forwarded-Proto, X-Forwarded-Server, X-HTTP-Method-Override, X-Modified, X-OTHER, X-PING, X-PINGOTHER, X-Powered-By, X-Real-IP, X-Requested-With');
+  header('Access-Control-Allow-Headers: '      .   'Accept,Accept-Charset,Accept-Encoding,Accept-Language,Access-Control-Allow-Credentials,Access-Control-Allow-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Origin,Access-Control-Expose-Headers,Access-Control-Max-Age,Access-Control-Request-Headers,Access-Control-Request-Method,Cache-Control,Connection,Content-Description,Content-Encoding,Content-Language,Content-Length,Content-Transfer-Encoding,Content-Type,Cookie,Date,DNT,Expires,Host,If-Modified-Since,Keep-Alive,Last-Modified,Origin,Pragma,Referer,Remote-Address,Server,Set-Cookie,Timing-Allow-Origin,Transfer-Encoding,User-Agent,Vary,X-Content-Type-Options,X-CustomHeader,X-Forwarded-For,X-Forwarded-Host,X-Forwarded-Port,X-Forwarded-Proto,X-Forwarded-Server,X-HTTP-Method-Override,X-Modified,X-OTHER,X-PING,X-PINGOTHER,X-Powered-By,X-Real-IP,X-Requested-With');
+  header('Access-Control-Expose-Headers: '     .   'Accept,Accept-Charset,Accept-Encoding,Accept-Language,Access-Control-Allow-Credentials,Access-Control-Allow-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Origin,Access-Control-Expose-Headers,Access-Control-Max-Age,Access-Control-Request-Headers,Access-Control-Request-Method,Cache-Control,Connection,Content-Description,Content-Encoding,Content-Language,Content-Length,Content-Transfer-Encoding,Content-Type,Cookie,Date,DNT,Expires,Host,If-Modified-Since,Keep-Alive,Last-Modified,Origin,Pragma,Referer,Remote-Address,Server,Set-Cookie,Timing-Allow-Origin,Transfer-Encoding,User-Agent,Vary,X-Content-Type-Options,X-CustomHeader,X-Forwarded-For,X-Forwarded-Host,X-Forwarded-Port,X-Forwarded-Proto,X-Forwarded-Server,X-HTTP-Method-Override,X-Modified,X-OTHER,X-PING,X-PINGOTHER,X-Powered-By,X-Real-IP,X-Requested-With');
   header('Access-Control-Allow-Credentials: '  .   'true');
   header('Timing-Allow-Origin: '               .   '*');
   header('Vary: '                              .   'Accept-Encoding, Content-Description, Content-Transfer-Encoding, Content-Type, Remote-Address, X-Forwarded-For, X-Forwarded-Host, X-Forwarded-Port, X-Forwarded-Proto, X-Forwarded-Server, X-HTTP-Method-Override, X-Real-IP');
@@ -24,8 +24,9 @@
   header('X-Xss-Protection: '                  .   '1;mode=block');
   header('X-Content-Type-Options: '            .   'nosniff');
   header('X-UA-Compatible: '                   .   'IE=Edge,chrome=1');
-  header('X-Robots-Tag: '                      .   'index, follow, snippet, archive, odp, translate, imageindex');
-  header('X-Powered-By: '                      .   'eladkarako.com servers are Powered By Love ..and catnip!');
+  header('X-Robots-Tag: '                      .   'index,follow,snippet,archive,odp,translate,imageindex');
+  header('X-Powered-By: '                      .   'Love..and catnip!');
+  header('Content-Type: '                      .   'text/json;charset=UTF-8');
 
   /* functionality */
   require_once('request.php');
@@ -49,7 +50,6 @@
                      );
 
 
-  header('Content-Type: '                      .   'text/json;charset=UTF-8');
   print($xhr);
 
   /* clean up and explicit flush */
